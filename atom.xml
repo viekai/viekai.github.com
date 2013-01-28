@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[笨小孩]]></title>
+  <link href="http://viegk.github.com/atom.xml" rel="self"/>
+  <link href="http://viegk.github.com/"/>
+  <updated>2013-01-28T18:26:55+08:00</updated>
+  <id>http://viegk.github.com/</id>
+  <author>
+    <name><![CDATA[vie]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[octopress + github 搭建个人博客]]></title>
+    <link href="http://viegk.github.com/blog/2013/01/28/hello/"/>
+    <updated>2013-01-28T18:17:00+08:00</updated>
+    <id>http://viegk.github.com/blog/2013/01/28/hello</id>
+    <content type="html"><![CDATA[<h1>octopress 安装</h1>
+
+<ul>
+<li>环境初始化
+
+<blockquote><p>git clone git://github.com/imathis/octopress.git octopress
+gem install bundle
+bundle install</p>
+
+<h2>#</h2></blockquote></li>
+<li>与github连接，需要先去github网站新建一个repo，并且该repo的名字一定要为：yourName.github.com
+
+<blockquote><p>rake setup_github_pages</p>
+
+<h2>#</h2></blockquote></li>
+<li>生成页面
+
+<blockquote><p>rake generate</p></blockquote></li>
+<li>预览页面
+
+<blockquote><p>rake preview
+保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览</p></blockquote></li>
+<li>部署页面
+
+<blockquote><p>rake deploy</p></blockquote></li>
+</ul>
+
+
+<h1>主题切换</h1>
+]]></content>
+  </entry>
+  
+</feed>
