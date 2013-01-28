@@ -4,7 +4,7 @@
   <title><![CDATA[笨小孩]]></title>
   <link href="http://viegk.github.com/atom.xml" rel="self"/>
   <link href="http://viegk.github.com/"/>
-  <updated>2013-01-28T18:26:55+08:00</updated>
+  <updated>2013-01-28T18:30:06+08:00</updated>
   <id>http://viegk.github.com/</id>
   <author>
     <name><![CDATA[vie]]></name>
@@ -25,21 +25,18 @@
 
 <blockquote><p>git clone git://github.com/imathis/octopress.git octopress
 gem install bundle
-bundle install</p>
-
-<h2>#</h2></blockquote></li>
+bundle install</p></blockquote></li>
 <li>与github连接，需要先去github网站新建一个repo，并且该repo的名字一定要为：yourName.github.com
 
-<blockquote><p>rake setup_github_pages</p>
-
-<h2>#</h2></blockquote></li>
+<blockquote><p>rake setup_github_pages</p></blockquote></li>
 <li>生成页面
 
 <blockquote><p>rake generate</p></blockquote></li>
 <li>预览页面
 
-<blockquote><p>rake preview
-保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览</p></blockquote></li>
+<blockquote><h1>rake preview</h1>
+
+<p>保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览</p></blockquote></li>
 <li>部署页面
 
 <blockquote><p>rake deploy</p></blockquote></li>
