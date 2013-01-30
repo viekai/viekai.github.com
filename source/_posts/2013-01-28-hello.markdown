@@ -7,19 +7,33 @@ categories:
 ---
 
 # octopress 安装 #
-* 环境初始化 
-> git clone git://github.com/imathis/octopress.git octopress
-> gem install bundle 
-> bundle install
-* 与github连接，需要先去github网站新建一个repo，并且该repo的名字一定要为：yourName.github.com
-> rake setup\_github\_pages
-* 生成页面
-> rake generate
-* 预览页面
-> rake preview
-保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览
-* 部署页面
-> rake deploy
+## 环境初始化 ##
+```bash
+    git clone git://github.com/imathis/octopress.git octopress
+    gem install bundle 
+    bundle install
+    rake setup_github_pages
+```
+在执行setup_github_pages时会提示输入github上的项目名，所以需要先在github建立一个repo，该repo
+的名字要符合: yourUseName.github.com的规则，否则octopress无法创建相应的分支与github上的对应
 
-# 主题切换 #
+## 生成页面 ##
+```bash
+    rake generate
+```
+## 预览页面 ##
+```bash
+    rake preview
+```
+保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览
+
+##部署页面##
+```bash
+rake deploy
+```
+## 主题切换 ##
+```bash
+rake install['theme_name']
+```
+
 
