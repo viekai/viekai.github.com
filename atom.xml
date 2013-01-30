@@ -4,7 +4,7 @@
   <title><![CDATA[笨小孩]]></title>
   <link href="http://viekai.github.com/atom.xml" rel="self"/>
   <link href="http://viekai.github.com/"/>
-  <updated>2013-01-30T10:14:50+08:00</updated>
+  <updated>2013-01-30T10:47:21+08:00</updated>
   <id>http://viekai.github.com/</id>
   <author>
     <name><![CDATA[vie]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[旅程的开始]]></title>
+    <link href="http://viekai.github.com/blog/2013/01/30/2012-dot-01-dot-30/"/>
+    <updated>2013-01-30T10:44:00+08:00</updated>
+    <id>http://viekai.github.com/blog/2013/01/30/2012-dot-01-dot-30</id>
+    <content type="html"><![CDATA[<h1>终于搞定了octopress</h1>
+
+<p>因为在github上的帐号没有进行EMAIL的认证，导致无法发布博客页面#&#8211;， 现在终于搞定，以后有空就谢谢博客，记录学习到的和体会
+到的东西。Follow youre heater！</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[octopress + github 搭建个人博客]]></title>
