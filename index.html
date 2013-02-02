@@ -124,56 +124,76 @@ octopress是对jekyll的封装，使使用更加友好。废话不多说，大�
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake install<span class="o">[</span><span class="s1">&#39;theme_name&#39;</span><span class="o">]</span>
-</span><span class='line'><span class="c">## 新建页面 ## </span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>bash
-rake new_post[&#8216;NewPageName&#8217;]
-该命令会在source/_posts/下生成以当前时间和页面名字命名的.markdown 文件，可以通过编辑该文件，以<a href="http://wowubuntu.com/markdown/">markdown</a>
-语法编辑该页面</p>
-
-<h2>生成页面</h2>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>输出一下信息，既说明转换成功了：</p>
+<p>如果懒得自己折腾，可以去网上找一些已经做好的第三方主题(其实octopress默认的主题也不错拉), 本博客使用的是[slash]</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">## Generating Site with Jekyll</span>
-</span><span class='line'>unchanged sass/screen.scss
-</span><span class='line'>Configuration from /home/work/git/blog/octopress/_config.yml
-</span><span class='line'>Building site: <span class="nb">source</span> -&gt; public
-</span><span class='line'>Successfully generated site: <span class="nb">source</span> -&gt; public
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">cd </span>octopress
+</span><span class='line'>git clone git@github.com:tommy351/octopress-Theme-Slash.git .thems/slash
+</span><span class='line'>rake install<span class="o">[</span><span class="s1">&#39;slash&#39;</span><span class="o">]</span>
+</span><span class='line'>rake generate
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>转换完成以后，可以现在本地预览生成的页面：</p>
+<h2>新建页面 ##</h2>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake preview
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s1">&#39;NewPageName&#39;</span><span class="o">]</span>
+</span><span class='line'>该命令会在source/_posts/下生成以当前时间和页面名字命名的.markdown 文件，可以通过编辑该文件，以<span class="o">[</span>markdown<span class="o">](</span>http://wowubuntu.com/markdown/<span class="o">)</span>
+</span><span class='line'>语法编辑该页面
+</span><span class='line'><span class="c">## 生成页面 ##</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览</p>
+<p>bash</p>
 
-<h2>部署页面</h2>
+<pre><code>rake generate
+</code></pre>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>输出一下信息，既说明转换成功了：
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>在等10分钟左右就以后可以在username.github.com上访问生成的博客。</p>
+<p>bash</p>
+
+<pre><code>## Generating Site with Jekyll
+unchanged sass/screen.scss
+Configuration from /home/work/git/blog/octopress/_config.yml
+Building site: source -&gt; public
+Successfully generated site: source -&gt; public
+</code></pre>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>转换完成以后，可以现在本地预览生成的页面：
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>bash</p>
+
+<pre><code>rake preview
+</code></pre>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览
+</span><span class='line'><span class="c">##部署页面##</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>bash
+rake deploy
+&#8220;`
+在等10分钟左右就以后可以在username.github.com上访问生成的博客。</p>
 
 <h2>碰到的一些问题</h2>
 
