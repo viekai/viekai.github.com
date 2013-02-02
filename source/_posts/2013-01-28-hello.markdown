@@ -1,0 +1,71 @@
+---
+layout: post
+title: "octopress + github 搭建个人博客"
+date: 2013-01-28 18:17
+comments: true
+categories: 
+---
+一直想有个地方可以记录学到的和感悟到的东西，博客当然是不错的选择。但是如果选择主流的博客网站比如说csdn，蛋疼的格式控制，以及在浏览器上面
+小框框里面编辑的赶脚对于我这种重度vimer来说是相当的痛苦。不过还好，有了github,然后又有了jekyll和octopress,于是世界变得美好了。
+
+
+github page功能可以支持发布静态的html 页面，而jeklly作为一个转化器，可以将markdown格式的文本文件转化为html页面push到github上，让其发布。
+octopress是对jekyll的封装，使使用更加友好。废话不多说，大家自己动手试试吧。
+
+# octopress 安装 #
+## 环境初始化 ##
+1. 安装ruby1.9.3或者以上
+    octoprss 是使用ruby 设计的轻量级博客系统，所以在使用该框架以前，需要ruby1.9.3以上版本的支持，ruby
+    环境安装如下:
+    ```bash
+        curl -L https://get.rvm.io | bash -s stable --ruby    
+        rvm install 1.9.3
+        rvm use 1.9.3
+        rvm rubygems latest
+    ```
+2. octoprss 环境初始化 
+    ```bash
+        git clone git://github.com/imathis/octopress.git octopres
+        gem install bundle 
+        bundle install
+        rake setup_github_pages
+    ```
+在执行setup_github_pages时会提示输入github上的项目名，所以需要先在github建立一个repo，该repo
+的名字要符合: yourUseName.github.com的规则，否则octopress无法创建相应的分支与github上的对应
+## 主题切换 ##
+```bash
+rake install['theme_name']
+## 新建页面 ## 
+```bash
+rake new_post['NewPageName']
+该命令会在source/_posts/下生成以当前时间和页面名字命名的.markdown 文件，可以通过编辑该文件，以[markdown](http://wowubuntu.com/markdown/) 
+语法编辑该页面
+## 生成页面 ##
+```bash
+    rake generate
+```
+输出一下信息，既说明转换成功了：
+```bash
+    ## Generating Site with Jekyll
+    unchanged sass/screen.scss
+    Configuration from /home/work/git/blog/octopress/_config.yml
+    Building site: source -> public
+    Successfully generated site: source -> public
+```
+转换完成以后，可以现在本地预览生成的页面：
+```bash
+    rake preview
+```
+保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览
+##部署页面##
+```bash
+rake deploy
+```
+在等10分钟左右就以后可以在username.github.com上访问生成的博客。
+
+##碰到的一些问题
+1. 在rake generate 和 rake deploy部署完以后不能在username.github.com上更新。纠结了好久，发现竟然是由于github上所填的email地址没有
+验证，导致上面的html不能发布。。
+
+So,enjoy it!!
+
