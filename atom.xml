@@ -4,11 +4,11 @@
   <title><![CDATA[笨小孩]]></title>
   <link href="http://viekai.github.com/atom.xml" rel="self"/>
   <link href="http://viekai.github.com/"/>
-  <updated>2013-02-02T01:48:56-08:00</updated>
+  <updated>2013-02-02T03:58:16-08:00</updated>
   <id>http://viekai.github.com/</id>
   <author>
     <name><![CDATA[vie]]></name>
-    
+    <email><![CDATA[gongkaivi@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
@@ -18,11 +18,11 @@
     <link href="http://viekai.github.com/blog/2013/01/28/hello/"/>
     <updated>2013-01-28T18:17:00-08:00</updated>
     <id>http://viekai.github.com/blog/2013/01/28/hello</id>
-    <content type="html"><![CDATA[<p>一直想有个地方可以记录学到的和感悟到的东西，博客当然是不错的选择。但是如果选择主流的博客网站比如说csdn，蛋疼的格式控制，以及在浏览器上面
-小框框里面编辑的赶脚对于我这种重度vimer来说是相当的痛苦。不过还好，有了github,然后又有了jekyll和octopress,于是世界变得美好了。</p>
+    <content type="html"><![CDATA[<p>一直想有个地方可以记录学到的和感悟到的东西，博客当然是不错的选择。但是如果选择主流的博客网站比如说csdn，蛋疼的格式控制，以及在浏览器的
+小框框里面编辑的赶脚对于我这种重度vimer来说是相当的痛苦。不过自从有了github,有了jekyll和octopress 以后世界变得不一样了。</p>
 
-<p>github page功能可以支持发布静态的html 页面，而jeklly作为一个转化器，可以将markdown格式的文本文件转化为html页面push到github上，让其发布。
-octopress是对jekyll的封装，使使用更加友好。废话不多说，大家自己动手试试吧。</p>
+<p>github的page功能可以支持发布静态的html页面，而jeklly作为一个转化器，可以将markdown格式的文本文件转化为html页面push到github上, 两者结合可以实现
+在本地编辑，实时发布的需求octopress是对jekyll的封装，让jekyll更加友好。废话不多说，大家自己动手试试吧。</p>
 
 <h1>octopress 安装</h1>
 
@@ -30,33 +30,42 @@ octopress是对jekyll的封装，使使用更加友好。废话不多说，大�
 
 <ol>
 <li>安装ruby1.9.3或者以上
- octoprss 是使用ruby 设计的轻量级博客系统，所以在使用该框架以前，需要ruby1.9.3以上版本的支持，ruby
- 环境安装如下:
- &#8220;`bash
-
-<pre><code> curl -L https://get.rvm.io | bash -s stable --ruby    
- rvm install 1.9.3
- rvm use 1.9.3
- rvm rubygems latest
-</code></pre>
-
-<p> &#8220;`</p></li>
-<li>octoprss 环境初始化
- &#8220;`bash
-
-<pre><code> git clone git://github.com/imathis/octopress.git octopres
- gem install bundle 
- bundle install
- rake setup_github_pages
-</code></pre>
-
- &#8220;`
-在执行setup_github_pages时会提示输入github上的项目名，所以需要先在github建立一个repo，该repo
-的名字要符合: yourUseName.github.com的规则，否则octopress无法创建相应的分支与github上的对应
-
-<h2>主题切换</h2></li>
+octoprss 是使用ruby 设计的轻量级博客系统，需要ruby1.9.3以上版本的支持，ruby
+环境安装如下:</li>
 </ol>
 
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>curl -L https://get.rvm.io | bash -s stable --ruby
+</span><span class='line'>rvm install 1.9.3
+</span><span class='line'>rvm use 1.9.3
+</span><span class='line'>rvm rubygems latest
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>octoprss 环境初始化</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone git://github.com/imathis/octopress.git octopres
+</span><span class='line'>gem install bundle
+</span><span class='line'>bundle install
+</span><span class='line'>rake setup_github_pages
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>在执行setup_github_pages时会提示输入github上的项目名，所以需要先在github建立一个repo，该repo
+的名字要符合: yourUseName.github.com的规则，否则octopress无法创建相应的分支与github上的对应</p>
+
+<h2>主题切换</h2>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake install<span class="o">[</span><span class="s1">&#39;theme_name&#39;</span><span class="o">]</span>
@@ -79,56 +88,52 @@ octopress是对jekyll的封装，使使用更加友好。废话不多说，大�
 <h2>新建页面 ##</h2>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s1">&#39;NewPageName&#39;</span><span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>该命令会在source/_posts/下生成以当前时间和页面名字命名的.markdown 文件，可以通过编辑该文件，以<a href="http://wowubuntu.com/markdown/">markdown</a>
+语法编辑该页面</p>
+
+<h2>生成页面</h2>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>输出一下信息，既说明转换成功了：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s1">&#39;NewPageName&#39;</span><span class="o">]</span>
-</span><span class='line'>该命令会在source/_posts/下生成以当前时间和页面名字命名的.markdown 文件，可以通过编辑该文件，以<span class="o">[</span>markdown<span class="o">](</span>http://wowubuntu.com/markdown/<span class="o">)</span>
-</span><span class='line'>语法编辑该页面
-</span><span class='line'><span class="c">## 生成页面 ##</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">## Generating Site with Jekyll</span>
+</span><span class='line'>unchanged sass/screen.scss
+</span><span class='line'>Configuration from /home/work/git/blog/octopress/_config.yml
+</span><span class='line'>Building site: <span class="nb">source</span> -&gt; public
+</span><span class='line'>Successfully generated site: <span class="nb">source</span> -&gt; public
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>bash</p>
-
-<pre><code>rake generate
-</code></pre>
+<p>转换完成以后，可以现在本地预览生成的页面：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>输出一下信息，既说明转换成功了：
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake preview
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>bash</p>
+<p>保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览</p>
 
-<pre><code>## Generating Site with Jekyll
-unchanged sass/screen.scss
-Configuration from /home/work/git/blog/octopress/_config.yml
-Building site: source -&gt; public
-Successfully generated site: source -&gt; public
-</code></pre>
+<h2>部署页面</h2>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>转换完成以后，可以现在本地预览生成的页面：
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>rake deploy
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>bash</p>
-
-<pre><code>rake preview
-</code></pre>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>保持rake运行的状态下，在浏览器中输入http:127.0.0.1:4000预览
-</span><span class='line'><span class="c">##部署页面##</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>bash
-rake deploy
-&#8220;`
-在等10分钟左右就以后可以在username.github.com上访问生成的博客。</p>
+<p>在等10分钟左右就以后可以在username.github.com上访问生成的博客。</p>
 
 <h2>碰到的一些问题</h2>
 
