@@ -75,6 +75,7 @@
 	<div id="content" class="inner">
 
 
+
     <article class="post">
 	<h2 class="title">
 		
@@ -97,17 +98,13 @@
 <li>安装ruby1.9.3或者以上
 octoprss 是使用ruby 设计的轻量级博客系统，需要ruby1.9.3以上版本的支持，ruby
 环境安装如下:
- &#8220;` bash
 
 <pre><code> curl -L https://get.rvm.io | bash -s stable --ruby    
  rvm install 1.9.3
  rvm use 1.9.3
  rvm rubygems latest
-</code></pre>
-
-<p> &#8220;`</p></li>
+</code></pre></li>
 <li>octoprss 环境初始化
- &#8220;` bash
 
 <pre><code> git clone git://github.com/imathis/octopress.git octopres
  gem install bundle 
@@ -115,7 +112,6 @@ octoprss 是使用ruby 设计的轻量级博客系统，需要ruby1.9.3以上版
  rake setup_github_pages
 </code></pre>
 
- &#8220;`
 在执行setup_github_pages时会提示输入github上的项目名，所以需要先在github建立一个repo，该repo
 的名字要符合: yourUseName.github.com的规则，否则octopress无法创建相应的分支与github上的对应
 
@@ -141,15 +137,14 @@ octoprss 是使用ruby 设计的轻量级博客系统，需要ruby1.9.3以上版
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h2>新建页面 ##</h2>
+<h2>新建页面</h2>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake new_post<span class="o">[</span><span class="s1">&#39;NewPageName&#39;</span><span class="o">]</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>该命令会在source/_posts/下生成以当前时间和页面名字命名的.markdown 文件，可以通过编辑该文件，以<a href="http://wowubuntu.com/markdown/">markdown</a>
-语法编辑该页面</p>
+<p>该命令会在source/_posts/下生成以当前时间和页面名字命名的.markdown 文件，可以通过编辑该文件，以<a href="http://wowubuntu.com/markdown/">markdown</a>语法编辑该页面</p>
 
 <h2>生成页面</h2>
 
@@ -205,7 +200,6 @@ octoprss 是使用ruby 设计的轻量级博客系统，需要ruby1.9.3以上版
 		
 	</div>
 
-
 <div class="meta">
 	<div class="date">
 
@@ -222,17 +216,24 @@ octoprss 是使用ruby 设计的轻量级博客系统，需要ruby1.9.3以上版
 <time datetime="2013-01-28T18:17:00-08:00" pubdate data-updated="true">Jan 28<span>th</span>, 2013</time></div>
 	<div class="tags">
 
+
+	<a class='category' href='/blog/categories/octopress/'>octopress</a>
+
+
 </div>
 	
-		<span class="comments"><a href="/blog/2013/01/28/hello//index.html#disqus_thread">Comments</a></span>
+		<span class="comments"><a href="/blog/2013/01/28/hello//index.html#comment">评论</a></span>
 	
-</div></article>
+</div>
+</article>
+
 
 <nav id="pagenavi">
     
     
     <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
+</nav>
+</div>
 	<footer id="footer" class="inner">Copyright &copy; 2013
 
     vie
@@ -265,4 +266,5 @@ octoprss 是使用ruby 设计的轻量级博客系统，需要ruby1.9.3以上版
 
 
 </body>
+
 </html>
