@@ -89,41 +89,32 @@
 <ol>
 <li>安装ruby1.9.3或者以上
 octoprss 是使用ruby 设计的轻量级博客系统，需要ruby1.9.3以上版本的支持，ruby
-环境安装如下:</li>
+环境安装如下:
+ &#8220;` bash
+
+<pre><code> curl -L https://get.rvm.io | bash -s stable --ruby    
+ rvm install 1.9.3
+ rvm use 1.9.3
+ rvm rubygems latest
+</code></pre>
+
+<p> &#8220;`</p></li>
+<li>octoprss 环境初始化
+ &#8220;` bash
+
+<pre><code> git clone git://github.com/imathis/octopress.git octopres
+ gem install bundle 
+ bundle install
+ rake setup_github_pages
+</code></pre>
+
+ &#8220;`
+在执行setup_github_pages时会提示输入github上的项目名，所以需要先在github建立一个repo，该repo
+的名字要符合: yourUseName.github.com的规则，否则octopress无法创建相应的分支与github上的对应
+
+<h2>主题切换</h2></li>
 </ol>
 
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>curl -L https://get.rvm.io | bash -s stable --ruby
-</span><span class='line'>rvm install 1.9.3
-</span><span class='line'>rvm use 1.9.3
-</span><span class='line'>rvm rubygems latest
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>octoprss 环境初始化</li>
-</ol>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>git clone git://github.com/imathis/octopress.git octopres
-</span><span class='line'>gem install bundle
-</span><span class='line'>bundle install
-</span><span class='line'>rake setup_github_pages
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>在执行setup_github_pages时会提示输入github上的项目名，所以需要先在github建立一个repo，该repo
-的名字要符合: yourUseName.github.com的规则，否则octopress无法创建相应的分支与github上的对应</p>
-
-<h2>主题切换</h2>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='bash'><span class='line'>rake install<span class="o">[</span><span class="s1">&#39;theme_name&#39;</span><span class="o">]</span>
