@@ -16,10 +16,4 @@
 	<h2 class="title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h2>
 	<div class="entry-content">{{ content }}</div>
 {% endif %}
-<div class="meta">
-	<div class="date">{% include post/date.html %}{{ time }}</div>
-	<div class="tags">{% include post/categories.html %}</div>
-	{% if site.duoshuo_show_comment_count == true %}
-		<span class="comments"><a href="{{ root_url }}{{ post.url }}{{ page.url }}#comment">评论</a></span>
-	{% endif %}
-</div>
+
